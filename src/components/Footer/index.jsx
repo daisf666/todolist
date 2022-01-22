@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import "./index.css";
 
 export default class Footer extends Component {
+
+    static propTypes = {
+        todos: propTypes.array.isRequired,
+        checkAllTodo: propTypes.func.isRequired,
+        clearAllDone: propTypes.func.isRequired
+    }
 
     handleCheckAll = (event) => {
         return this.props.checkAllTodo(event.target.checked);

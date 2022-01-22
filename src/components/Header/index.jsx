@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import "./index.css"
 
 export default class Header extends Component {
+
+    static propTypes = {
+        addTodo: propTypes.func.isRequired
+    }
 
     handleKeyUp = (event) => {
         const { keyCode, target } = event;

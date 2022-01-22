@@ -1,8 +1,8 @@
 // 创建外壳组件App
 import React, { Component } from "react";
-import Header from "./component/Header";
-import List from "./component/List";
-import Footer from "./component/Footer";
+import Header from "./components/Header";
+import List from "./components/List";
+import Footer from "./components/Footer";
 // 引入APP样式
 import "./App.css";
 
@@ -11,9 +11,9 @@ import "./App.css";
 export default class App extends Component {
 
   state = {
-    todos: [{ id: 1, name: "学习", done: false },
-    { id: 2, name: "睡觉", done: false },
-    { id: 3, name: "打球", done: true }]
+    todos: [{ id: 'f4a546f5', name: "学习", done: false },
+    { id: 'DAS551A', name: "睡觉", done: false },
+    { id: 'DA4S5ada', name: "打球", done: true }]
   };
 
   addTodo = (todoObj) => {
@@ -70,6 +70,7 @@ export default class App extends Component {
     const { todos } = this.state;
     return (
       <div className="todo-container">
+        <h2 className="caption">&nbsp;用React脚手架创建的第一个项目————Todo List！</h2>
         <div className="todo-wrap">
           <Header addTodo={this.addTodo} />
           <List todos={todos} deleteTodoId={this.deleteTodoId} updateTodo={this.updateTodo} />

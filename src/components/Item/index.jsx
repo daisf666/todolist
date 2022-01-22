@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import "./index.css";
 
 export default class Item extends Component {
+
+    static propTypes = {
+        id: propTypes.string.isRequired,
+        name: propTypes.string.isRequired,
+        done: propTypes.bool.isRequired
+    }
+
     state = { mouse: false };
 
     handleMouse = (flag) => {
